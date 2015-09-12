@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Registration.aspx.cs" Inherits="_Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
-    <script src="Scripts/dobpicker/dobPicker.min.js"></script>
 </asp:Content>
 
 
@@ -23,9 +22,15 @@
                             </div>
                             <div class="form-group">
                                 <label for="DOB">Date of Birth</label>
-                                <select id="dobday"></select>
-                                <select id="dobmonth"></select>
-                                <select id="dobyear"></select>
+
+                                Year:<asp:DropDownList ID="ddlYear" runat="server" onchange="PopulateDays()" />
+                                Month:<asp:DropDownList ID="ddlMonth" runat="server" onchange="PopulateDays()" />
+                                Day:<asp:DropDownList ID="ddlDay" runat="server" />
+                                
+
+                                <asp:CustomValidator ID="Validator" runat="server" ErrorMessage="* Required"
+                                    ClientValidationFunction="Validate" />
+
                             </div>
                             <div class="form-group">
                                 <label for="Gender">Gender</label>
