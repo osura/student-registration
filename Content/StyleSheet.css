@@ -1,0 +1,22 @@
+﻿.social_media ul li {
+    list-style: none;
+    float: left;
+    padding-left: 5px;
+}
+    
+.social_media ul {
+    margin-left: -55px;
+}
+
+.navbar {
+    color: #999999;
+}
+.navbar-brand {
+    padding: 6px;
+}
+.footer{
+ background-color:#000;
+ color: #999999;
+}
+
+

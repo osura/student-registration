@@ -1,0 +1,123 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/StyleSheet.css" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="overflow-x: hidden">
+    <%--<form id="form1" runat="server">--%>
+    <%----------------header----------------------------%>
+
+    <nav class="navbar-inverse">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img src="images/nsbm-logo.png"></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="Home.aspx">Home <span class="sr-only">(current)</span></a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Programmes<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Undergraduate</a></li>
+                            <li><a href="#">Postgraduate</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="Registration.aspx">SignUp</a></li>
+                    <li><a href="#">SignIn</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    
+    <%--------------------------------------------------%>
+    <%--content page section--%>
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <%--------------------------------------------------------------------------%>
+    <%---------------------------------footer-----------------------------------------%>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-xs-12 col-sm-12">
+                    <div class="col-md-6 col-xs-12 col-sm-12">
+                        <div class="col-sm-12 col-md-12 col-xs-12  col-md-offset-2 col-sm-offset-4  ">
+                            <h4>Contact Us</h4>
+                            <p>
+                                309,High Level Road,<br />
+                                Colombo 05,0050,<br />
+                                Sri Lanka,<br />
+                                Tel : +94 (11) 544 5000,<br />
+                                Tel : +94 (11) 544 5009,
+                                <br />
+                                E-mail : info @nsbm.lk
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-xs-12 col-sm-12 "> 
+                        <div class="col-md-12 col-xs-12 col-lg-12 col-md-offset-2 col-sm-offset-4 ">
+                            <h4>Quick Links</h4>
+                            <h5>Programmes</h5>
+
+                            <div class="social_media">
+                                <ul>
+                                    <li><a href="#">
+                                        <img src="images/g6372.png" /></a></li>
+                                    <li><a href="#">
+                                        <img src="images/g6400.png" /></a></li>
+                                    <li><a href="#">
+                                        <img src="images/g3758.png" /></a></li>
+                                    <li><a href="#">
+                                        <img src="images/g6532.png" /></a></li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <h6 style="text-align: center;">&copy; by National School of Business Management | All rights reserved</h6>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <%--------------------------------------------------------------------------------%>
+    <%--Script section--%>
+    <script src="Scripts/jquery-1.9.1.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <%--------------------------------------------------------------------------%>
+    <%--</form>--%>
+</body>
+</html>
