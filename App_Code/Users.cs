@@ -20,10 +20,10 @@ public class Users
     String a_line_3;
     int contact_no;
     String photo;
-    String nsbmid;
-    int status;
+    String nsbmid="not set";
+    int status=0;
     int Login_idLogin;
-    int User_type_idUser_type;
+    int User_type_idUser_type=3;
 
     
 

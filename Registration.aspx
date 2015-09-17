@@ -22,57 +22,61 @@
                             </div>
                             <div class="form-inline">
                                 <label for="DOB">Date of Birth</label><br>
-                                   <div class="form-group"> <label>Year:</label><asp:DropDownList ID="ddlYear" runat="server" onchange="PopulateDays()" /></div>
-                                   <div class="form-group"> <label>Month:</label><asp:DropDownList ID="ddlMonth" runat="server" onchange="PopulateDays()" /></div>
-                                   <div class="form-group"> <label>Day:</label><asp:DropDownList ID="ddlDay" runat="server" /></div>
-
-
-
-
+                                <div class="form-group">
+                                    <label>Year:</label><asp:DropDownList ID="ddlYear" runat="server" onchange="PopulateDays()" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Month:</label><asp:DropDownList ID="ddlMonth" runat="server" onchange="PopulateDays()" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Day:</label><asp:DropDownList ID="ddlDay" runat="server" />
+                                </div>
                             </div>
-                        <div class="form-group">
-                            <label for="Gender">Gender</label>
-                            <asp:DropDownList ID="DropDownList1" runat="server">
-                                <asp:ListItem Value="1">Male</asp:ListItem>
-                                <asp:ListItem Value="2">Female</asp:ListItem>
-                            </asp:DropDownList>
-                        </div>
-                        <div class="form-group">
-                            <label for="username">Username</label>
-                            <asp:TextBox ID="username" runat="server" class="form-control" placeholder="Username"></asp:TextBox>
-                        </div>
-                        <div class="form-group">
-                            <label for="Email">E-mail</label>
-                            <asp:TextBox ID="email" runat="server" class="form-control" placeholder="E-mail" TextMode="Email"></asp:TextBox>
-                            <asp:TextBox ID="email2" runat="server" class="form-control" placeholder="Re-enter E-mail" TextMode="Email"></asp:TextBox>
-                        </div>
-                        <div class="form-group">
-                            <label for="Password">Password</label>
-                            <asp:TextBox ID="password" runat="server" class="form-control" placeholder="Password" TextMode="Password"></asp:TextBox>
-                            <asp:TextBox ID="password2" runat="server" class="form-control" placeholder="Re-enter Password" TextMode="Password"></asp:TextBox>
-                        </div>
-                        <div class="form-group">
-                            <label for="Address">Address</label>
-                            <asp:TextBox ID="aline1" runat="server" class="form-control" placeholder="Address line"></asp:TextBox>
-                            <asp:TextBox ID="aline2" runat="server" class="form-control" placeholder="Address line"></asp:TextBox>
-                            <asp:TextBox ID="aline3" runat="server" class="form-control" placeholder="Address line"></asp:TextBox>
-                        </div>
-                        <div class="form-group">
-                            <label for="Contact">Contact No</label>
-                            <asp:TextBox ID="contact" runat="server" class="form-control" placeholder="Contcat No" TextMode="Phone"></asp:TextBox>
-                        </div>
-                        <div class="form-group">
-                            <label for="InputFile">Photo</label>
-                            <asp:FileUpload ID="FileUpload" runat="server" accept="image/*" />
-                            <p class="help-block">(2 x 2 inches)</p>
-                        </div>
 
-                        <asp:Button ID="Submit_Button" class="btn btn-default" runat="server" Text="Submit" CommandName="s" OnClick="Submit_Button_Click" />
+                            <div class="form-group">
+                                <label for="Gender">Gender</label>
+                                <asp:DropDownList ID="DropDownList1" runat="server">
+                                    <asp:ListItem Value="1">Male</asp:ListItem>
+                                    <asp:ListItem Value="2">Female</asp:ListItem>
+                                </asp:DropDownList>
+                            </div>
 
+                            <div class="form-group">
+                                <label for="Email">E-mail</label>
+                                <asp:TextBox ID="email" runat="server" class="form-control" placeholder="E-mail" TextMode="Email"></asp:TextBox>
+                                <asp:TextBox ID="email2" runat="server" class="form-control" placeholder="Re-enter E-mail" TextMode="Email"></asp:TextBox>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="Password">Password</label>
+                                <asp:TextBox ID="password" runat="server" class="form-control" placeholder="Password" TextMode="Password"></asp:TextBox>
+                                <asp:TextBox ID="password2" runat="server" class="form-control" placeholder="Re-enter Password" TextMode="Password"></asp:TextBox>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="Address">Address</label>
+                                <asp:TextBox ID="aline1" runat="server" class="form-control" placeholder="Address line"></asp:TextBox>
+                                <asp:TextBox ID="aline2" runat="server" class="form-control" placeholder="Address line"></asp:TextBox>
+                                <asp:TextBox ID="aline3" runat="server" class="form-control" placeholder="Address line"></asp:TextBox>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="Contact">Contact No</label>
+                                <asp:TextBox ID="contact" runat="server" class="form-control" placeholder="Contcat No" TextMode="Phone"></asp:TextBox>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="InputFile">Photo</label>
+                                <asp:FileUpload ID="FileUpload" runat="server" accept="image/*" />
+                                <p class="help-block">(2 x 2 inches)</p>
+                            </div>
+
+                            <asp:Button ID="Submit_Button" class="btn btn-default" runat="server" Text="Submit" CommandName="s" OnClick="Submit_Button_Click" />
+
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
         </div>
 
     </form>

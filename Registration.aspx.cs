@@ -38,10 +38,24 @@ public partial class _Default : System.Web.UI.Page
     {
         Users s = new Users();
 
+        Login l = new Login();
+        l.Email = email.Text;
+        l.Password = password.Text;
+
+        LoginController lc = new LoginController();
+        lc.addLogin(l);
+        s.Login_idLogin1 = lc.getLoginId(l);
+
+        
+       
+        
+        
+        
+
         s.Fname = fname.Text;
         s.Mname = mname.Text;
         s.Lname = lname.Text;
-        // s.Dob = Calendar1.SelectedDate;
+        s.Dob = this.SelectedDate;
         s.Gender = int.Parse(DropDownList1.SelectedValue);
         s.A_line_1 = aline1.Text;
         s.A_line_2 = aline2.Text;
