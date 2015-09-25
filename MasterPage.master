@@ -11,6 +11,8 @@
     <link href="Content/bootstrap.css" rel="stylesheet" />
     <link href="Content/StyleSheet.css" rel="stylesheet" />
 
+    <script src="Scripts/jquery-1.9.1.js"></script>
+
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -116,7 +118,7 @@
 
     <%--------------------------------------------------------------------------------%>
     <%--Script section--%>
-    <script src="Scripts/jquery-1.9.1.js"></script>
+    
     <script src="Scripts/bootstrap.js"></script>
     <%--------------------------------------------------------------------------%>
     <%--</form>--%>
