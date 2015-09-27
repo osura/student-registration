@@ -34,12 +34,42 @@ public class ProgrammeController
         return db.InsertData(cm);
     }
 
-    public DataTable getProgrammeData() {
+    public MySqlDataReader getProgrammeData(Category c) {
 
-        cm.CommandText = "select * from Programme";
+        cm.CommandText = "SELECT * FROM category INNER JOIN programme  ON category.idCategory=programme.Category_idCategory INNER JOIN school ON school.idSchool=programme.School_idSchool INNER JOIN accredited_by ON accredited_by.idAccredited_By=programme.Accredited_By_idAccredited_By WHERE category.idCategory='"+c.IdCategory+"'; ";
 
-        DataTable dt = db.GetData(cm);
+        MySqlDataReader dt = db.GetDataAsDataReader(cm);
         return dt;
 
     }
+
+    public MySqlDataReader getCategoryData(Category c) {
+
+        cm.CommandText = "SELECT DISTINCT Category_Name FROM category INNER JOIN programme  ON category.idCategory=programme.Category_idCategory INNER JOIN school ON school.idSchool=programme.School_idSchool INNER JOIN accredited_by ON accredited_by.idAccredited_By=programme.Accredited_By_idAccredited_By WHERE category.idCategory='" + c.IdCategory + "'; ";
+
+        MySqlDataReader dt = db.GetDataAsDataReader(cm);
+        return dt;
+    }
+
+
+    public MySqlDataReader getSchoolData(Category c) {
+
+        cm.CommandText = "SELECT DISTINCT School_name FROM category INNER JOIN programme  ON category.idCategory=programme.Category_idCategory INNER JOIN school ON school.idSchool=programme.School_idSchool INNER JOIN accredited_by ON accredited_by.idAccredited_By=programme.Accredited_By_idAccredited_By WHERE category.idCategory='" + c.IdCategory + "'; ";
+
+        MySqlDataReader dt = db.GetDataAsDataReader(cm);
+        return dt;
+    }
+
+    public DataTable getProgrammeDataTable(Category c) {
+
+        cm.CommandText = "SELECT * FROM category INNER JOIN programme  ON category.idCategory=programme.Category_idCategory INNER JOIN school ON school.idSchool=programme.School_idSchool INNER JOIN accredited_by ON accredited_by.idAccredited_By=programme.Accredited_By_idAccredited_By WHERE category.idCategory='" + c.IdCategory + "'; ";
+
+        DataTable dt = db.GetData(cm);
+
+        return dt;
+    
+    }
+
+   
+
 }

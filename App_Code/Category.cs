@@ -8,6 +8,7 @@ using System.Web;
 /// </summary>
 public class Category
 {
+    int idCategory;
     String categoryName;
 
     
@@ -23,6 +24,13 @@ public class Category
     {
         get { return categoryName; }
         set { categoryName = value; }
+    }
+
+
+    public int IdCategory
+    {
+        get { return idCategory; }
+        set { idCategory = value; }
     }
 
 }

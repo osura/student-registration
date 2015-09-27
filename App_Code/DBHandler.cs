@@ -8,13 +8,12 @@ using System.Data;
 
 class DBHandler
 {
-    MySqlConnection cn;
+    private MySqlConnection cn;
 
     public DBHandler()
     {
-        cn = new MySqlConnection();
-        cn.ConnectionString = "server=localhost;user id=root;database=student_registration";
 
+        cn = DBConnection.getConnetion();
     }
 
 
@@ -26,13 +25,13 @@ class DBHandler
         {
             cm.Connection = cn;
 
-            cn.Open();
+            
             if (cm.ExecuteNonQuery() == 1)
             { m = "Data Saved"; }
 
             else { m = "Data not Saved"; }
 
-            cn.Close();
+            
 
         }
         catch (Exception e)
@@ -54,6 +53,17 @@ class DBHandler
         adp.Fill(dt);
 
         return dt;
+
+    }
+
+    public MySqlDataReader GetDataAsDataReader(MySqlCommand cm) {
+
+        cm.Connection = cn;
+        
+        MySqlDataReader dr = cm.ExecuteReader();
+
+      
+        return dr;
 
     }
 }
