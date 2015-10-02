@@ -19,6 +19,7 @@
 </head>
 <body style="overflow-x: hidden">
     <%--<form id="form1" runat="server">--%>
+    <%--<form id="form1" runat="server" method="post" style="margin-bottom: 1.5%" enctype="multipart/form-data">--%>
     <%----------------header----------------------------%>
 
     <nav class="navbar-inverse">
@@ -34,6 +35,8 @@
                 <a class="navbar-brand" href="Home.aspx">
                     <img src="images/nsbm-logo.png"></a>
             </div>
+
+
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -51,14 +54,15 @@
 
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="Registration.aspx">SignUp</a></li>
-                    <li><a href="#">SignIn</a></li>
+                    <li><a href="Login.aspx">LogIn</a></li>
                 </ul>
             </div>
+
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
     </nav>
-    
+
     <%--------------------------------------------------%>
     <%--content page section--%>
     <div>
@@ -86,7 +90,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-6 col-xs-12 col-sm-12 "> 
+                    <div class="col-md-6 col-xs-12 col-sm-12 ">
                         <div class="col-md-12 col-xs-12 col-lg-12 col-md-offset-2 col-sm-offset-4 ">
                             <h4>Quick Links</h4>
                             <h5>Programmes</h5>
@@ -118,7 +122,7 @@
 
     <%--------------------------------------------------------------------------------%>
     <%--Script section--%>
-    
+
     <script src="Scripts/bootstrap.js"></script>
     <%--------------------------------------------------------------------------%>
     <%--</form>--%>

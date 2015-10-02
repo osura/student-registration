@@ -34,11 +34,24 @@ public class LoginController
 
     public int getLoginId(Login l) {
 
-        cm.CommandText = "select idLogin from Login where email='"+l.Email+"'";
+        cm.CommandText = "SELECT idLogin FROM Login WHERE email='"+l.Email+"'";
 
         DataTable dt = db.GetData(cm);
         Object ob = dt.Rows[0][0];
       
+        int i = Convert.ToInt32(ob);
+
+        return i;
+
+    }
+
+    public int checkLogin(Login lg) {
+
+        cm.CommandText = "SELECT COUNT(*) from Login WHERE email='" + lg.Email+ "' AND password='"+lg.Password+"'";
+
+        DataTable dt = db.GetData(cm);
+        Object ob = dt.Rows[0][0];
+
         int i = Convert.ToInt32(ob);
 
         return i;

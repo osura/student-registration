@@ -3,7 +3,7 @@
     float: left;
     padding-left: 5px;
 }
-    
+
 .social_media ul {
     margin-left: -55px;
 }
@@ -11,12 +11,36 @@
 .navbar {
     color: #999999;
 }
+
 .navbar-brand {
     padding: 6px;
 }
-.footer{
- background-color:#000;
- color: #999999;
+
+.footer {
+    background-color: #000;
+    color: #999999;
 }
 
 
+/*-----------------------------------login------------------------------------------*/
+
+
+.login_body { 
+  background: url("../images/Graduate.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height:700px;
+}
+
+.panel-default {
+opacity: 0.9;
+margin-top:30px;
+}
+.form-group.last { margin-bottom:0px; }
+
+/*----------------------------------------------------------------------------------*/
+.programmes {
+    min-height: 400px;
+}

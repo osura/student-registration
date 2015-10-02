@@ -21,7 +21,7 @@
                                 <asp:TextBox ID="lname" runat="server" class="form-control" placeholder="Last Name"></asp:TextBox>
                             </div>
                             <div class="form-inline">
-                                <label for="DOB">Date of Birth</label><br>
+                                <label for="DOB">Date of Birth</label><br />
                                 <div class="form-group">
                                     <label>Year:</label><asp:DropDownList ID="ddlYear" runat="server" onchange="PopulateDays()" />
                                 </div>

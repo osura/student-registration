@@ -24,7 +24,14 @@ public class DBConnection
 
             cn = new MySqlConnection();
             cn.ConnectionString = "server=localhost;user id=root;database=student_registration";
-            cn.Open();
+            try
+            {
+                cn.Open();
+            }
+            catch(Exception e) 
+            {
+                
+            }
 
         }
 
